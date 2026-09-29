@@ -24,6 +24,6 @@ public class ManagerAnalystAgent extends AbstractAnalysisAgent {
         var meta = context.metadata();
         return promptLoader.load("analyst/manager-analyst-user",
                 context.fundCode(), context.fundName(), context.analysisDate(),
-                meta != null ? meta.getOrDefault("managerData", "暂无详细数据") : "暂无详细数据");
+                meta != null ? meta.getOrDefault("fundManager", "暂无详细数据") : "暂无详细数据");
     }
 }
